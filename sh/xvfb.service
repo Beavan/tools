@@ -1,0 +1,11 @@
+# /etc/systemd/system/xvfb.service
+
+[Unit]
+Description=X Virtual Frame Buffer Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/Xvfb :99 -screen 0 2560x1600x24 -ac +extension GLX +render -noreset
+
+[Install]
+WantedBy=multi-user.target
