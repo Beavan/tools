@@ -101,10 +101,11 @@ call plug#end()
 " 主题配色 
 "==============================================================================
 
-" 开启24bit的颜色,开启这个颜色会更漂亮一些
-set termguicolors
-" 配色方案,可以从上面插件安装中的选择一个使用 
-colorscheme one " 主题
+" 配色方案
+set t_Co=256 " 设置支持256色
+set termguicolors " 开启颜色更漂亮一些,但部分终端显示异常
+" 设置主题 
+colorscheme one " 从安装的主题插件中选择一个
 set background=dark " 主题背景 dark-深色; light-浅色
 
 "==============================================================================
@@ -141,7 +142,7 @@ let NERDTreeAutoCenter=1
 " 是否显示隐藏文件
 let NERDTreeShowHidden=0
 " 设置宽度
-" let NERDTreeWinSize=31
+" let NERDTreeWinSize=22
 " 忽略一下文件的显示
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 " 打开 vim 文件及显示书签列表
