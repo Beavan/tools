@@ -75,15 +75,15 @@ Plug 'airblade/vim-gitgutter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-" 配色方案
-" colorscheme neodark
-Plug 'KeitaNakamura/neodark.vim'
-" colorscheme monokai
-Plug 'crusoexia/vim-monokai'
-" colorscheme github 
-Plug 'acarapetis/vim-colors-github'
+" 配色方案/主题
+" colorscheme molokai 
+Plug 'tomasr/molokai'
 " colorscheme one 
 Plug 'rakr/vim-one'
+" colorscheme OceanicNext                                                                                                                           
+Plug 'mhartington/oceanic-next'
+" colorscheme neodark
+Plug 'KeitaNakamura/neodark.vim'
 
 " go 主要插件
 Plug 'fatih/vim-go', { 'tag': '*' }
@@ -102,8 +102,18 @@ call plug#end()
 "==============================================================================
 
 " 配色方案
-set t_Co=256 " 设置支持256色
-set termguicolors " 开启颜色更漂亮一些,但部分终端显示异常
+set t_Co=256 " 设置Vim支持256色
+
+" 开启True-Color,注意,不支持真彩色的终端将显示异常
+" 详细开启方法参见:https://www.cnblogs.com/Beavan/p/16563136.htm
+if has("termguicolors")
+    " fix bug for vim
+    set t_8f=^[[38;2;%lu;%lu;%lum
+    set t_8b=^[[48;2;%lu;%lu;%lum
+    " enable true color
+    set termguicolors
+endif
+
 " 设置主题 
 colorscheme one " 从安装的主题插件中选择一个
 set background=dark " 主题背景 dark-深色; light-浅色
