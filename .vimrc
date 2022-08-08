@@ -108,8 +108,8 @@ set t_Co=256 " 设置Vim支持256色
 " 详细开启方法参见:https://www.cnblogs.com/Beavan/p/16563136.htm
 if has("termguicolors")
     " fix bug for vim
-    set t_8f=[38;2;%lu;%lu;%lum " 这里的^[需要替换,使用ctrol+v然后按esc
-    set t_8b=[48;2;%lu;%lu;%lum " 这里的^[需要替换,使用ctrol+v然后按esc
+    set t_8f=[38;2;%lu;%lu;%lum " 这里^[[38中的^[需要替换,使用ctrol+v然后按esc
+    set t_8b=[48;2;%lu;%lu;%lum " 这里^[[38中的^[需要替换,使用ctrol+v然后按esc
     " enable true color
     set termguicolors
 endif
