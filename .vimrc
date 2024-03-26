@@ -80,7 +80,7 @@ Plug 'honza/vim-snippets'
 Plug 'tomasr/molokai'
 " colorscheme one 
 Plug 'rakr/vim-one'
-" colorscheme OceanicNext                                                                                                                           
+" colorscheme OceanicNext
 Plug 'mhartington/oceanic-next'
 " colorscheme neodark
 Plug 'KeitaNakamura/neodark.vim'
